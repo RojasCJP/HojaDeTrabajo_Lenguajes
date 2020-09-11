@@ -39,13 +39,13 @@ def AFD (entrada):
         except:
             pass
         if encurso == tk_parA and estado == 0:
-            print('tk_parA')
+            print('(  tk_parA')
             estado = 1
         elif encurso == tk_menorQ and estado == 1:
-            print('tk_menorQ')
+            print('<  tk_menorQ')
             estado = 2
         elif encurso == tk_corchA and estado == 2:
-            print('tk_corchA')
+            print('[  tk_corchA')
             estado = 3
         elif encurso.isalpha() and estado == (3 or 2):
             if estado == 3:
@@ -55,13 +55,13 @@ def AFD (entrada):
             print('tk_numero')
             estado = 2
         elif encurso == tk_corchC and estado == 2:
-            print('tk_corchC')
+            print(']  tk_corchC')
             estado = 3
         elif encurso == tk_mayorQ and estado == 1:
-            print('tk_mayorQ')
+            print('>  tk_mayorQ')
             estado = 1
         elif encurso == tk_parC and estado == 1:
-            return print('tk_parC')
+            return print(')  tk_parC')
         elif (encurso == tk_coma or encurso == '"') and (entrada[i + 1] == tk_menorQ or entrada[i + 1] == tk_corchA):
             if entrada[i + 1] == tk_mayorQ or entrada[i+1] == tk_menorQ:
                 estado = 1
